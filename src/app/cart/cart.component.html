@@ -1,0 +1,19 @@
+<h2>Carrito De Compras</h2>
+
+<div class="cart-container">
+    <p *ngIf="items.length === 0" class="empty">
+        El carrito esta vacio</p>
+
+<div *ngFor="let product of items" class="cart-item">
+    <span class="product-name">{{ product.name }}</span>
+    <span class="product-price">
+        {{product.price | currency: 'COP'}}
+    </span>
+</div>
+
+
+<button *ngIf="items.length > 0" (click) ="clear()">
+    Vaciar Carrito
+</button>
+</div>
+<h3>Total: {{ total | currency:'COP' }}</h3>

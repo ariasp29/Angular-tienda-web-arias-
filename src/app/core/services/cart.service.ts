@@ -1,0 +1,25 @@
+import { Injectable } from '@angular/core';
+import { Product } from '../../shared/models/product';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CartService {
+
+  private items: Product[] = []
+
+  constructor() {}
+
+  addToCart(product: Product) {
+    this.items.push(product)
+    console.log('Producto agregado al carrito:', product)
+  }
+
+  getItems() {
+    return this.items
+  }
+
+  clearCart() {
+    this.items = []
+  }
+}

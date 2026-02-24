@@ -1,0 +1,30 @@
+<div class="card">
+
+    <img [src]="product.image" alt="{{ product.name }}">
+
+    <div class="card-body">
+
+    <h3>{{ product.name }}</h3>
+
+    <div class="price-section">
+
+    <p class="oldPrice" *ngIf="product.oldPrice">
+        {{ product.oldPrice | number:'1.0-0':'es-CO' }}
+        </p>
+
+    <p class="current-price"> 
+        ${{ product.price | number:'1.0-0':'es-CO'}}
+    </p>
+
+    <p class="discount">
+    {{ discountPercentage ? '-' + discountPercentage + '%' : '' }}
+    </p>
+    
+    </div>
+    </div>
+
+    <button (click)="addToCart()">
+        Agregar al carrito
+    </button>
+
+</div>

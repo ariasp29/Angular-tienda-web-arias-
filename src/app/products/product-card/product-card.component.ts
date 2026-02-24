@@ -1,0 +1,31 @@
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Product } from '../../shared/models/product';
+import { CartService } from '../../core/services/cart.service';
+
+@Component({
+  selector: 'app-product-card',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './product-card.component.html',
+  styleUrls: ['./product-card.component.css']
+})
+export class ProductCardComponent {
+
+  @Input() product!: Product
+
+  constructor(private cartService: CartService) {}
+
+    addToCart() {
+      this.cartService.addToCart(this.product)
+    }
+
+    get discountPercentage(): number | null {
+      if (!this.product.oldPrice) return null;
+
+      return Math.round(
+        ((this.product.oldPrice - this.product.price) / this.product.oldPrice) * 100
+      )
+    }
+
+}
