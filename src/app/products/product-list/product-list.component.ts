@@ -29,7 +29,7 @@ export class ProductListComponent {
   },
   {
     id: 3,
-    name: 'Apple whatch',
+    name: 'whatch',
     price: 999000,
     oldPrice: 1350000,
     image: 'assets/applewatch.png'

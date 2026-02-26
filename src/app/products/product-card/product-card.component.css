@@ -1,7 +1,7 @@
 .card{
     border: 1px solid #ddd;
     width: 250px;
-    height: 380px;
+    min-height: 420px;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -37,6 +37,10 @@
 }
 .card h3{
     margin: 15px 0 5px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 button{
     margin-top: auto;
