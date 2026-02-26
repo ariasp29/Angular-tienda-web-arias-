@@ -1,25 +1,48 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../../shared/models/product';
 
+export interface CartItem extends Product {
+  quantity: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  private items: Product[] = []
+  private items: CartItem[] = [];
 
-  constructor() {}
-
-  addToCart(product: Product) {
-    this.items.push(product)
-    console.log('Producto agregado al carrito:', product)
+  constructor() {
+    this.loadCart();
   }
 
-  getItems() {
-    return this.items
+  addToCart(product: Product) {
+    const existingItem = this.items.find(item => item.id === product.id);
+
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      this.items.push({ ...product, quantity: 1 });
+    }
+
+    this.saveCart();
+  }
+
+  getItems(): CartItem[] {
+    return this.items;
   }
 
   clearCart() {
-    this.items = []
+    this.items = [];
+    localStorage.removeItem('cart');
+  }
+
+  private saveCart() {
+    localStorage.setItem('cart', JSON.stringify(this.items));
+  }
+
+  private loadCart() {
+    const storedCart = localStorage.getItem('cart');
+    this.items = storedCart ? JSON.parse(storedCart) : [];
   }
 }
