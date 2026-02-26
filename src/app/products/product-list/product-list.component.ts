@@ -15,7 +15,7 @@ export class ProductListComponent {
   products: Product[] = [
   {
     id: 1,
-    name: 'laptop',
+    name: 'Laptop',
     price: 2990000,
     oldPrice: 3500000,
     image: 'assets/macbook.png'
@@ -29,7 +29,7 @@ export class ProductListComponent {
   },
   {
     id: 3,
-    name: 'whatch',
+    name: 'Watch',
     price: 999000,
     oldPrice: 1350000,
     image: 'assets/applewatch.png'
