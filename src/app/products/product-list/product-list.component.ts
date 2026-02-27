@@ -50,21 +50,21 @@ export class ProductListComponent {
   },
   {
     id: 6,
-    name: "Iphone 16 Pro-MAx",
+    name: "Iphone 16 Pro MAx",
     price:4500000,
     oldPrice:5200000,
     image: 'assets/iphone.png'
   },
   {
     id: 7,
-    name: 'X-box serie X',
+    name: 'Xbox serie X',
     price: 1900000,
     oldPrice: 2300000,
     image: 'assets/x_box.png'
   },
   {
     id: 8,
-    name: 'JBl Charge 6',
+    name: 'JBL Charge 6',
     price: 650000,
     oldPrice: 789000,
     image: 'assets/jbl.png'
