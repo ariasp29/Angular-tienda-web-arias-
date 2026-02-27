@@ -23,7 +23,7 @@ export class ProductListComponent {
   {
     id: 2,
     name: 'Airpods',
-    price: 450000,
+    price: 500000,
     oldPrice: 699000,
     image:'assets/airpods.png'
   },
@@ -40,6 +40,48 @@ export class ProductListComponent {
     price:2150000,
     oldPrice: 2499000,
     image: 'assets/ps5.png'
+  },
+  {
+    id: 5,
+    name: 'Tv 4K',
+    price: 1749000 ,
+    oldPrice: 2199000,
+    image: 'assets/tv.png' 
+  },
+  {
+    id: 6,
+    name: "Iphone 16 Pro-MAx",
+    price:4500000,
+    oldPrice:5200000,
+    image: 'assets/iphone.png'
+  },
+  {
+    id: 7,
+    name: 'X-box serie X',
+    price: 1900000,
+    oldPrice: 2300000,
+    image: 'assets/x_box.png'
+  },
+  {
+    id: 8,
+    name: 'JBl Charge 6',
+    price: 650000,
+    oldPrice: 789000,
+    image: 'assets/jbl.png'
+  },
+  {
+    id: 9,
+    name: 'Apple Airtag',
+    price: 135000,
+    oldPrice: 189000,
+    image: 'assets/apple-airtag.png'
+  },
+  {
+    id: 10,
+    name: 'Apple ipad M2',
+    price: 2399000,
+    oldPrice: 2599000,
+    image: 'assets/ipad.png'
   }
   ]
 }
