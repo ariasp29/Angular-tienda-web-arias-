@@ -33,6 +33,13 @@ export class ProductListComponent {
     price: 999000,
     oldPrice: 1350000,
     image: 'assets/applewatch.png'
+  },
+  {
+    id: 4,
+    name: 'Play Station',
+    price:2150000,
+    oldPrice: 2499000,
+    image: 'assets/ps5.png'
   }
   ]
 }
